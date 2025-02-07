@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTE</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        div#botao {
+            background-color: green;
+            color: white;
+            width: 500px;
+            height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="botao">Intereja...</div>
+
+    <script>
+        var d = document.getElementById('botao')
+        d.addEventListener('click', clicar)
+        d.addEventListener('mouseenter', entrar)
+        d.addEventListener('mouseout', saiu)
+        function clicar() {
+            d.innerText = 'Clicou'
+            d.style.background = 'green'
+        }
+        function entrar() {
+            d.style.background = 'red'
+            d.innerText = 'Entrou...'
+        }
+        function saiu() {
+            d.style.background = 'green'
+            d.innerText = 'Saiu...'
+        }
+    </script>
+</body>
+
+</html>
